@@ -1,0 +1,57 @@
+swagger: '2.0'
+info:
+  description: 
+    Kanye west has given us a number of songs over the years. 
+    This API allows you to get a two line lyric based on a key word you share.
+  version: 1.0.0
+  title: Kanye Lyric API
+  contact:
+    email: sisekelo.tki@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+host: kanyelyric.com
+basePath: /v1
+schemes:
+  - https
+  - http
+paths:
+  /lyric/{keyword}:
+    get:
+      tags:
+        - Get song lyric
+      summary: Get song based on keyword
+      description: ''
+      operationId: getLyric
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+      - name: "keyword"
+        in: "path"
+        description: "The keyword of the lyric you are looking for"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/LyricObject"
+        "400":
+          description: "Invalid keyword supplied"
+        "404":
+          description: "Lyric not found"
+definitions:
+ LyricObject:
+    type: "object"
+    properties:
+      keyword:
+          type: "string"
+          description: "Requested keyword"
+      lyric:
+        type: "string"
+        description: "Requested lyric"
+      song:
+        type: "string"
+        description: "Song where lyric is from"
