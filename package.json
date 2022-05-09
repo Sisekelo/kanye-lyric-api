@@ -1,0 +1,25 @@
+{
+  "name": "kanye-lyric-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sisekelo/kanye-lyric-api.git"
+  },
+  "keywords": [
+    "kanye"
+  ],
+  "author": "Sisekelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sisekelo/kanye-lyric-api/issues"
+  },
+  "homepage": "https://github.com/Sisekelo/kanye-lyric-api#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
